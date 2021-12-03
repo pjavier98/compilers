@@ -1,0 +1,29 @@
+void fn fibonacci(int num) {
+    if (num == 0) {
+        return;
+    } elsif (num == 1) {
+        puts("0");
+        return;
+    }
+
+    int first = 0;
+    int second = 1;
+    int acc = first + second;
+    
+    while (acc < num) {
+        puts(", %d", acc);
+        first = second;
+        second = acc;
+        acc = first + second;
+    }   
+}
+
+int fn main() {
+    int num;
+
+    gets(num);
+    
+    fibonacci(num);
+
+    return 0;
+}

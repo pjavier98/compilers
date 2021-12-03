@@ -1,0 +1,49 @@
+int [] fn shell_sort(int size, int unsorted_list[size]) {
+    int value;
+    int i;
+    int j;
+    int h = 1;
+
+    while (h < size) {
+        
+        for i in (h, size; i = i + 1) {
+            value = unsorted_list[i];
+            j = i;
+            
+            while (j > h - 1 && value <= unsorted_list[j - h]) {
+                unsorted_list[j] = unsorted_list [j - h];
+                j = j - h;
+            }
+
+            unsorted_list[j] = value;
+        }
+        
+        h = h / 3;
+    }
+
+    return unsorted_list;
+}
+
+int fn main() {
+    int unsorted_list[1000];
+    int value;
+    int size;
+    int i = 0;
+
+    while(gets(value) != EOF) {
+        unsorted_list[i] = value;
+        i = i + 1;
+    }
+
+    size = i;
+    
+    unsorted_list = shell_sort(size, unsorted_list);
+    
+    for i in (0, size - 1, 1) {
+        puts("%d ", unsorted_list[i]);
+    }
+    
+    puts("%d", unsorted_list[size - 1]);
+
+    return 0;
+}
