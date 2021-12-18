@@ -1,8 +1,8 @@
 from enum import Enum, auto
 
 class TokenCategory(Enum):
-  # Variable Names
-  varName = auto()
+  # Identifiers
+  identifier = auto()
 
   # Primitives Types
   typeInt = auto()
@@ -90,5 +90,3 @@ class TokenCategory(Enum):
 
   # End Of File
   EOF = auto()
-
-print(TokenCategory.opConcat.value)

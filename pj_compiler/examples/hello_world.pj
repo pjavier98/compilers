@@ -1,4 +1,4 @@
 int fn main() {
     puts("Hello World");
-    return 0;
+    return 1;
 }

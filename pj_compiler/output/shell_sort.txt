@@ -1,0 +1,270 @@
+   1  int [] fn shell_sort(int size, int unsorted_list[size]) {
+          [0001, 0001] (0002,              typeInt) {int}
+          [0001, 0005] (0045,           arrayBegin) {[}
+          [0001, 0006] (0046,             arrayEnd) {]}
+          [0001, 0008] (0041,               fnDecl) {fn}
+          [0001, 0011] (0001,           identifier) {shell_sort}
+          [0001, 0021] (0047,           paramBegin) {(}
+          [0001, 0022] (0002,              typeInt) {int}
+          [0001, 0026] (0001,           identifier) {size}
+          [0001, 0030] (0040,             commaSep) {,}
+          [0001, 0032] (0002,              typeInt) {int}
+          [0001, 0036] (0001,           identifier) {unsorted_list}
+          [0001, 0049] (0045,           arrayBegin) {[}
+          [0001, 0050] (0001,           identifier) {size}
+          [0001, 0054] (0046,             arrayEnd) {]}
+          [0001, 0055] (0048,             paramEnd) {)}
+          [0001, 0057] (0049,           scopeBegin) {{}
+   2      int value;
+          [0002, 0005] (0002,              typeInt) {int}
+          [0002, 0009] (0001,           identifier) {value}
+          [0002, 0014] (0039,            semicolon) {;}
+   3      int i;
+          [0003, 0005] (0002,              typeInt) {int}
+          [0003, 0009] (0001,           identifier) {i}
+          [0003, 0010] (0039,            semicolon) {;}
+   4      int j;
+          [0004, 0005] (0002,              typeInt) {int}
+          [0004, 0009] (0001,           identifier) {j}
+          [0004, 0010] (0039,            semicolon) {;}
+   5      int h = 1;
+          [0005, 0005] (0002,              typeInt) {int}
+          [0005, 0009] (0001,           identifier) {h}
+          [0005, 0011] (0029,               opAttr) {=}
+          [0005, 0013] (0009,               intVal) {1}
+          [0005, 0014] (0039,            semicolon) {;}
+   6  
+   7      while (h < size) {
+          [0007, 0005] (0017,             cmdWhile) {while}
+          [0007, 0011] (0047,           paramBegin) {(}
+          [0007, 0012] (0001,           identifier) {h}
+          [0007, 0014] (0026,           opLessThan) {<}
+          [0007, 0016] (0001,           identifier) {size}
+          [0007, 0020] (0048,             paramEnd) {)}
+          [0007, 0022] (0049,           scopeBegin) {{}
+   8          
+   9          for i in (h, size; i = i + 1) {
+          [0009, 0009] (0016,               cmdFor) {for}
+          [0009, 0013] (0001,           identifier) {i}
+          [0009, 0015] (0001,           identifier) {in}
+          [0009, 0018] (0047,           paramBegin) {(}
+          [0009, 0019] (0001,           identifier) {h}
+          [0009, 0020] (0040,             commaSep) {,}
+          [0009, 0022] (0001,           identifier) {size}
+          [0009, 0026] (0039,            semicolon) {;}
+          [0009, 0028] (0001,           identifier) {i}
+          [0009, 0030] (0029,               opAttr) {=}
+          [0009, 0032] (0001,           identifier) {i}
+          [0009, 0034] (0030,                opAdd) {+}
+          [0009, 0036] (0009,               intVal) {1}
+          [0009, 0037] (0048,             paramEnd) {)}
+          [0009, 0039] (0049,           scopeBegin) {{}
+  10              value = unsorted_list[i];
+          [0010, 0013] (0001,           identifier) {value}
+          [0010, 0019] (0029,               opAttr) {=}
+          [0010, 0021] (0001,           identifier) {unsorted_list}
+          [0010, 0034] (0045,           arrayBegin) {[}
+          [0010, 0035] (0001,           identifier) {i}
+          [0010, 0036] (0046,             arrayEnd) {]}
+          [0010, 0037] (0039,            semicolon) {;}
+  11              j = i;
+          [0011, 0013] (0001,           identifier) {j}
+          [0011, 0015] (0029,               opAttr) {=}
+          [0011, 0017] (0001,           identifier) {i}
+          [0011, 0018] (0039,            semicolon) {;}
+  12              
+  13              while (j > h - 1 && value <= unsorted_list[j - h]) {
+          [0013, 0013] (0017,             cmdWhile) {while}
+          [0013, 0019] (0047,           paramBegin) {(}
+          [0013, 0020] (0001,           identifier) {j}
+          [0013, 0022] (0025,            opGtrThan) {>}
+          [0013, 0024] (0001,           identifier) {h}
+          [0013, 0026] (0031,                opSub) {-}
+          [0013, 0028] (0009,               intVal) {1}
+          [0013, 0030] (0022,                opAnd) {&&}
+          [0013, 0033] (0001,           identifier) {value}
+          [0013, 0039] (0028,             opLessEq) {<=}
+          [0013, 0042] (0001,           identifier) {unsorted_list}
+          [0013, 0055] (0045,           arrayBegin) {[}
+          [0013, 0056] (0001,           identifier) {j}
+          [0013, 0058] (0031,                opSub) {-}
+          [0013, 0060] (0001,           identifier) {h}
+          [0013, 0061] (0046,             arrayEnd) {]}
+          [0013, 0062] (0048,             paramEnd) {)}
+          [0013, 0064] (0049,           scopeBegin) {{}
+  14                  unsorted_list[j] = unsorted_list [j - h];
+          [0014, 0017] (0001,           identifier) {unsorted_list}
+          [0014, 0030] (0045,           arrayBegin) {[}
+          [0014, 0031] (0001,           identifier) {j}
+          [0014, 0032] (0046,             arrayEnd) {]}
+          [0014, 0034] (0029,               opAttr) {=}
+          [0014, 0036] (0001,           identifier) {unsorted_list}
+          [0014, 0050] (0045,           arrayBegin) {[}
+          [0014, 0051] (0001,           identifier) {j}
+          [0014, 0053] (0031,                opSub) {-}
+          [0014, 0055] (0001,           identifier) {h}
+          [0014, 0056] (0046,             arrayEnd) {]}
+          [0014, 0057] (0039,            semicolon) {;}
+  15                  j = j - h;
+          [0015, 0017] (0001,           identifier) {j}
+          [0015, 0019] (0029,               opAttr) {=}
+          [0015, 0021] (0001,           identifier) {j}
+          [0015, 0023] (0031,                opSub) {-}
+          [0015, 0025] (0001,           identifier) {h}
+          [0015, 0026] (0039,            semicolon) {;}
+  16              }
+          [0016, 0013] (0050,             scopeEnd) {}}
+  17  
+  18              unsorted_list[j] = value;
+          [0018, 0013] (0001,           identifier) {unsorted_list}
+          [0018, 0026] (0045,           arrayBegin) {[}
+          [0018, 0027] (0001,           identifier) {j}
+          [0018, 0028] (0046,             arrayEnd) {]}
+          [0018, 0030] (0029,               opAttr) {=}
+          [0018, 0032] (0001,           identifier) {value}
+          [0018, 0037] (0039,            semicolon) {;}
+  19          }
+          [0019, 0009] (0050,             scopeEnd) {}}
+  20          
+  21          h = h / 3;
+          [0021, 0009] (0001,           identifier) {h}
+          [0021, 0011] (0029,               opAttr) {=}
+          [0021, 0013] (0001,           identifier) {h}
+          [0021, 0015] (0033,                opDiv) {/}
+          [0021, 0017] (0009,               intVal) {3}
+          [0021, 0018] (0039,            semicolon) {;}
+  22      }
+          [0022, 0005] (0050,             scopeEnd) {}}
+  23  
+  24      return unsorted_list;
+          [0024, 0005] (0042,                fnRtn) {return}
+          [0024, 0012] (0001,           identifier) {unsorted_list}
+          [0024, 0025] (0039,            semicolon) {;}
+  25  }
+          [0025, 0001] (0050,             scopeEnd) {}}
+  26  
+  27  int fn main() {
+          [0027, 0001] (0002,              typeInt) {int}
+          [0027, 0005] (0041,               fnDecl) {fn}
+          [0027, 0008] (0038,                 main) {main}
+          [0027, 0012] (0047,           paramBegin) {(}
+          [0027, 0013] (0048,             paramEnd) {)}
+          [0027, 0015] (0049,           scopeBegin) {{}
+  28      int unsorted_list[1000];
+          [0028, 0005] (0002,              typeInt) {int}
+          [0028, 0009] (0001,           identifier) {unsorted_list}
+          [0028, 0022] (0045,           arrayBegin) {[}
+          [0028, 0023] (0051,      tokenNotDefined) {1000}
+          [0028, 0027] (0046,             arrayEnd) {]}
+          [0028, 0028] (0039,            semicolon) {;}
+  29      int value;
+          [0029, 0005] (0002,              typeInt) {int}
+          [0029, 0009] (0001,           identifier) {value}
+          [0029, 0014] (0039,            semicolon) {;}
+  30      int size;
+          [0030, 0005] (0002,              typeInt) {int}
+          [0030, 0009] (0001,           identifier) {size}
+          [0030, 0013] (0039,            semicolon) {;}
+  31      int i = 0;
+          [0031, 0005] (0002,              typeInt) {int}
+          [0031, 0009] (0001,           identifier) {i}
+          [0031, 0011] (0029,               opAttr) {=}
+          [0031, 0013] (0009,               intVal) {0}
+          [0031, 0014] (0039,            semicolon) {;}
+  32  
+  33      while(gets(value) != EOF) {
+          [0033, 0005] (0017,             cmdWhile) {while}
+          [0033, 0010] (0047,           paramBegin) {(}
+          [0033, 0011] (0043,               fnRead) {gets}
+          [0033, 0015] (0047,           paramBegin) {(}
+          [0033, 0016] (0001,           identifier) {value}
+          [0033, 0021] (0048,             paramEnd) {)}
+          [0033, 0023] (0024,           opNotEqual) {!=}
+          [0033, 0026] (0052,                  EOF) {EOF}
+          [0033, 0029] (0048,             paramEnd) {)}
+          [0033, 0031] (0049,           scopeBegin) {{}
+  34          unsorted_list[i] = value;
+          [0034, 0009] (0001,           identifier) {unsorted_list}
+          [0034, 0022] (0045,           arrayBegin) {[}
+          [0034, 0023] (0001,           identifier) {i}
+          [0034, 0024] (0046,             arrayEnd) {]}
+          [0034, 0026] (0029,               opAttr) {=}
+          [0034, 0028] (0001,           identifier) {value}
+          [0034, 0033] (0039,            semicolon) {;}
+  35          i = i + 1;
+          [0035, 0009] (0001,           identifier) {i}
+          [0035, 0011] (0029,               opAttr) {=}
+          [0035, 0013] (0001,           identifier) {i}
+          [0035, 0015] (0030,                opAdd) {+}
+          [0035, 0017] (0009,               intVal) {1}
+          [0035, 0018] (0039,            semicolon) {;}
+  36      }
+          [0036, 0005] (0050,             scopeEnd) {}}
+  37  
+  38      size = i;
+          [0038, 0005] (0001,           identifier) {size}
+          [0038, 0010] (0029,               opAttr) {=}
+          [0038, 0012] (0001,           identifier) {i}
+          [0038, 0013] (0039,            semicolon) {;}
+  39      
+  40      unsorted_list = shell_sort(size, unsorted_list);
+          [0040, 0005] (0001,           identifier) {unsorted_list}
+          [0040, 0019] (0029,               opAttr) {=}
+          [0040, 0021] (0001,           identifier) {shell_sort}
+          [0040, 0031] (0047,           paramBegin) {(}
+          [0040, 0032] (0001,           identifier) {size}
+          [0040, 0036] (0040,             commaSep) {,}
+          [0040, 0038] (0001,           identifier) {unsorted_list}
+          [0040, 0051] (0048,             paramEnd) {)}
+          [0040, 0052] (0039,            semicolon) {;}
+  41      
+  42      for i in (0, size - 1, 1) {
+          [0042, 0005] (0016,               cmdFor) {for}
+          [0042, 0009] (0001,           identifier) {i}
+          [0042, 0011] (0001,           identifier) {in}
+          [0042, 0014] (0047,           paramBegin) {(}
+          [0042, 0015] (0009,               intVal) {0}
+          [0042, 0016] (0040,             commaSep) {,}
+          [0042, 0018] (0001,           identifier) {size}
+          [0042, 0023] (0031,                opSub) {-}
+          [0042, 0025] (0009,               intVal) {1}
+          [0042, 0026] (0040,             commaSep) {,}
+          [0042, 0028] (0009,               intVal) {1}
+          [0042, 0029] (0048,             paramEnd) {)}
+          [0042, 0031] (0049,           scopeBegin) {{}
+  43          puts("%d ", unsorted_list[i]);
+          [0043, 0009] (0044,              fnWrite) {puts}
+          [0043, 0013] (0047,           paramBegin) {(}
+          [0043, 0014] (0012,            stringVal) {"%d "}
+          [0043, 0019] (0040,             commaSep) {,}
+          [0043, 0021] (0001,           identifier) {unsorted_list}
+          [0043, 0034] (0045,           arrayBegin) {[}
+          [0043, 0035] (0001,           identifier) {i}
+          [0043, 0036] (0046,             arrayEnd) {]}
+          [0043, 0037] (0048,             paramEnd) {)}
+          [0043, 0038] (0039,            semicolon) {;}
+  44      }
+          [0044, 0005] (0050,             scopeEnd) {}}
+  45      
+  46      puts("%d", unsorted_list[size - 1]);
+          [0046, 0005] (0044,              fnWrite) {puts}
+          [0046, 0009] (0047,           paramBegin) {(}
+          [0046, 0010] (0012,            stringVal) {"%d"}
+          [0046, 0014] (0040,             commaSep) {,}
+          [0046, 0016] (0001,           identifier) {unsorted_list}
+          [0046, 0029] (0045,           arrayBegin) {[}
+          [0046, 0030] (0001,           identifier) {size}
+          [0046, 0035] (0031,                opSub) {-}
+          [0046, 0037] (0009,               intVal) {1}
+          [0046, 0038] (0046,             arrayEnd) {]}
+          [0046, 0039] (0048,             paramEnd) {)}
+          [0046, 0040] (0039,            semicolon) {;}
+  47  
+  48      return 0;
+          [0048, 0005] (0042,                fnRtn) {return}
+          [0048, 0012] (0009,               intVal) {0}
+          [0048, 0013] (0039,            semicolon) {;}
+  49  }
+          [0049, 0001] (0050,             scopeEnd) {}}
+  50  EOF
+          [0050, 0001] (0052,                     ) {EOF}

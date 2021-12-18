@@ -1,0 +1,21 @@
+   1  int fn main() {
+          [0001, 0001] (0002,              typeInt) {int}
+          [0001, 0005] (0041,               fnDecl) {fn}
+          [0001, 0008] (0038,                 main) {main}
+          [0001, 0012] (0047,           paramBegin) {(}
+          [0001, 0013] (0048,             paramEnd) {)}
+          [0001, 0015] (0049,           scopeBegin) {{}
+   2      puts("Hello World");
+          [0002, 0005] (0044,              fnWrite) {puts}
+          [0002, 0009] (0047,           paramBegin) {(}
+          [0002, 0010] (0012,            stringVal) {"Hello World"}
+          [0002, 0023] (0048,             paramEnd) {)}
+          [0002, 0024] (0039,            semicolon) {;}
+   3      return 0;
+          [0003, 0005] (0042,                fnRtn) {return}
+          [0003, 0012] (0009,               intVal) {0}
+          [0003, 0013] (0039,            semicolon) {;}
+   4  }
+          [0004, 0001] (0050,             scopeEnd) {}}
+   5  EOF
+          [0005, 0001] (0052,                     ) {EOF}
