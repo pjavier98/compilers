@@ -6,14 +6,13 @@ from tokens.token_category import TokenCategory
 
 class Lexical():
   def __init__(self, file):
-    separators = Separators()
     self.last_token = ""
     self.current_token = ""
     self.line_count = 0
     self.current_column = 0
     self.current_line = ""
     self.file = file
-    self.separators = separators.separators
+    self.separators = Separators().separators
     self.lexeme_table = LexemeTable().dict
     self.EOF = False
 
