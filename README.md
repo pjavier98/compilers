@@ -28,7 +28,13 @@ pipenv install <package>
 ```
 pipenv run python3 pj_compiler/lexical/main.py pj_compiler/examples/hello_world.pj
 
+pipenv run python3 pj_compiler/lexical/main.py pj_compiler/examples/hello_world.pj > pj_compiler/output/hello_world.txt
+
 pipenv run python3 pj_compiler/lexical/main.py pj_compiler/examples/fibonacci.pj
 
+pipenv run python3 pj_compiler/lexical/main.py pj_compiler/examples/fibonacci.pj > pj_compiler/output/fibonacci.txt
+
 pipenv run python3 pj_compiler/lexical/main.py pj_compiler/examples/shell_sort.pj
+
+pipenv run python3 pj_compiler/lexical/main.py pj_compiler/examples/shell_sort.pj > pj_compiler/output/shell_sort.txt
 ```

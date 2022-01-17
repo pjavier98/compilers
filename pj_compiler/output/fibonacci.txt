@@ -1,134 +1,134 @@
    1  void fn fibonacci(int num) {
-          [0001, 0001] (0007,             typeVoid) {void}
-          [0001, 0006] (0041,               fnDecl) {fn}
-          [0001, 0009] (0001,           identifier) {fibonacci}
-          [0001, 0018] (0047,           paramBegin) {(}
-          [0001, 0019] (0002,              typeInt) {int}
-          [0001, 0023] (0001,           identifier) {num}
-          [0001, 0026] (0048,             paramEnd) {)}
-          [0001, 0028] (0049,           scopeBegin) {{}
+              [0001, 0001] (0007,             typeVoid) {void}
+              [0001, 0006] (0041,               fnDecl) {fn}
+              [0001, 0009] (0001,           identifier) {fibonacci}
+              [0001, 0018] (0047,           paramBegin) {(}
+              [0001, 0019] (0002,              typeInt) {int}
+              [0001, 0023] (0001,           identifier) {num}
+              [0001, 0026] (0048,             paramEnd) {)}
+              [0001, 0028] (0049,           scopeBegin) {{}
    2      if (num == 0) {
-          [0002, 0005] (0013,                cmdIf) {if}
-          [0002, 0008] (0047,           paramBegin) {(}
-          [0002, 0009] (0001,           identifier) {num}
-          [0002, 0013] (0023,              opEqual) {==}
-          [0002, 0016] (0009,               intVal) {0}
-          [0002, 0017] (0048,             paramEnd) {)}
-          [0002, 0019] (0049,           scopeBegin) {{}
+              [0002, 0005] (0013,                cmdIf) {if}
+              [0002, 0008] (0047,           paramBegin) {(}
+              [0002, 0009] (0001,           identifier) {num}
+              [0002, 0013] (0023,              opEqual) {==}
+              [0002, 0016] (0009,               intVal) {0}
+              [0002, 0017] (0048,             paramEnd) {)}
+              [0002, 0019] (0049,           scopeBegin) {{}
    3          return;
-          [0003, 0009] (0042,                fnRtn) {return}
-          [0003, 0015] (0039,            semicolon) {;}
+              [0003, 0009] (0042,                fnRtn) {return}
+              [0003, 0015] (0039,            semicolon) {;}
    4      } elsif (num == 1) {
-          [0004, 0005] (0050,             scopeEnd) {}}
-          [0004, 0007] (0014,             cmdElsif) {elsif}
-          [0004, 0013] (0047,           paramBegin) {(}
-          [0004, 0014] (0001,           identifier) {num}
-          [0004, 0018] (0023,              opEqual) {==}
-          [0004, 0021] (0009,               intVal) {1}
-          [0004, 0022] (0048,             paramEnd) {)}
-          [0004, 0024] (0049,           scopeBegin) {{}
+              [0004, 0005] (0050,             scopeEnd) {}}
+              [0004, 0007] (0014,             cmdElsif) {elsif}
+              [0004, 0013] (0047,           paramBegin) {(}
+              [0004, 0014] (0001,           identifier) {num}
+              [0004, 0018] (0023,              opEqual) {==}
+              [0004, 0021] (0009,               intVal) {1}
+              [0004, 0022] (0048,             paramEnd) {)}
+              [0004, 0024] (0049,           scopeBegin) {{}
    5          puts("0");
-          [0005, 0009] (0044,              fnWrite) {puts}
-          [0005, 0013] (0047,           paramBegin) {(}
-          [0005, 0014] (0012,            stringVal) {"0"}
-          [0005, 0017] (0048,             paramEnd) {)}
-          [0005, 0018] (0039,            semicolon) {;}
+              [0005, 0009] (0044,              fnWrite) {puts}
+              [0005, 0013] (0047,           paramBegin) {(}
+              [0005, 0014] (0012,            stringVal) {"0"}
+              [0005, 0017] (0048,             paramEnd) {)}
+              [0005, 0018] (0039,            semicolon) {;}
    6          return;
-          [0006, 0009] (0042,                fnRtn) {return}
-          [0006, 0015] (0039,            semicolon) {;}
+              [0006, 0009] (0042,                fnRtn) {return}
+              [0006, 0015] (0039,            semicolon) {;}
    7      }
-          [0007, 0005] (0050,             scopeEnd) {}}
+              [0007, 0005] (0050,             scopeEnd) {}}
    8  
    9      int first = 0;
-          [0009, 0005] (0002,              typeInt) {int}
-          [0009, 0009] (0001,           identifier) {first}
-          [0009, 0015] (0029,               opAttr) {=}
-          [0009, 0017] (0009,               intVal) {0}
-          [0009, 0018] (0039,            semicolon) {;}
+              [0009, 0005] (0002,              typeInt) {int}
+              [0009, 0009] (0001,           identifier) {first}
+              [0009, 0015] (0029,               opAttr) {=}
+              [0009, 0017] (0009,               intVal) {0}
+              [0009, 0018] (0039,            semicolon) {;}
   10      int second = 1;
-          [0010, 0005] (0002,              typeInt) {int}
-          [0010, 0009] (0001,           identifier) {second}
-          [0010, 0016] (0029,               opAttr) {=}
-          [0010, 0018] (0009,               intVal) {1}
-          [0010, 0019] (0039,            semicolon) {;}
+              [0010, 0005] (0002,              typeInt) {int}
+              [0010, 0009] (0001,           identifier) {second}
+              [0010, 0016] (0029,               opAttr) {=}
+              [0010, 0018] (0009,               intVal) {1}
+              [0010, 0019] (0039,            semicolon) {;}
   11      int acc = first + second;
-          [0011, 0005] (0002,              typeInt) {int}
-          [0011, 0009] (0001,           identifier) {acc}
-          [0011, 0013] (0029,               opAttr) {=}
-          [0011, 0015] (0001,           identifier) {first}
-          [0011, 0021] (0030,                opAdd) {+}
-          [0011, 0023] (0001,           identifier) {second}
-          [0011, 0029] (0039,            semicolon) {;}
+              [0011, 0005] (0002,              typeInt) {int}
+              [0011, 0009] (0001,           identifier) {acc}
+              [0011, 0013] (0029,               opAttr) {=}
+              [0011, 0015] (0001,           identifier) {first}
+              [0011, 0021] (0030,                opAdd) {+}
+              [0011, 0023] (0001,           identifier) {second}
+              [0011, 0029] (0039,            semicolon) {;}
   12      
   13      while (acc < num) {
-          [0013, 0005] (0017,             cmdWhile) {while}
-          [0013, 0011] (0047,           paramBegin) {(}
-          [0013, 0012] (0001,           identifier) {acc}
-          [0013, 0016] (0026,           opLessThan) {<}
-          [0013, 0018] (0001,           identifier) {num}
-          [0013, 0021] (0048,             paramEnd) {)}
-          [0013, 0023] (0049,           scopeBegin) {{}
+              [0013, 0005] (0017,             cmdWhile) {while}
+              [0013, 0011] (0047,           paramBegin) {(}
+              [0013, 0012] (0001,           identifier) {acc}
+              [0013, 0016] (0026,           opLessThan) {<}
+              [0013, 0018] (0001,           identifier) {num}
+              [0013, 0021] (0048,             paramEnd) {)}
+              [0013, 0023] (0049,           scopeBegin) {{}
   14          puts(", %d", acc);
-          [0014, 0009] (0044,              fnWrite) {puts}
-          [0014, 0013] (0047,           paramBegin) {(}
-          [0014, 0014] (0012,            stringVal) {", %d"}
-          [0014, 0020] (0040,             commaSep) {,}
-          [0014, 0022] (0001,           identifier) {acc}
-          [0014, 0025] (0048,             paramEnd) {)}
-          [0014, 0026] (0039,            semicolon) {;}
+              [0014, 0009] (0044,              fnWrite) {puts}
+              [0014, 0013] (0047,           paramBegin) {(}
+              [0014, 0014] (0012,            stringVal) {", %d"}
+              [0014, 0020] (0040,             commaSep) {,}
+              [0014, 0022] (0001,           identifier) {acc}
+              [0014, 0025] (0048,             paramEnd) {)}
+              [0014, 0026] (0039,            semicolon) {;}
   15          first = second;
-          [0015, 0009] (0001,           identifier) {first}
-          [0015, 0015] (0029,               opAttr) {=}
-          [0015, 0017] (0001,           identifier) {second}
-          [0015, 0023] (0039,            semicolon) {;}
+              [0015, 0009] (0001,           identifier) {first}
+              [0015, 0015] (0029,               opAttr) {=}
+              [0015, 0017] (0001,           identifier) {second}
+              [0015, 0023] (0039,            semicolon) {;}
   16          second = acc;
-          [0016, 0009] (0001,           identifier) {second}
-          [0016, 0016] (0029,               opAttr) {=}
-          [0016, 0018] (0001,           identifier) {acc}
-          [0016, 0021] (0039,            semicolon) {;}
+              [0016, 0009] (0001,           identifier) {second}
+              [0016, 0016] (0029,               opAttr) {=}
+              [0016, 0018] (0001,           identifier) {acc}
+              [0016, 0021] (0039,            semicolon) {;}
   17          acc = first + second;
-          [0017, 0009] (0001,           identifier) {acc}
-          [0017, 0013] (0029,               opAttr) {=}
-          [0017, 0015] (0001,           identifier) {first}
-          [0017, 0021] (0030,                opAdd) {+}
-          [0017, 0023] (0001,           identifier) {second}
-          [0017, 0029] (0039,            semicolon) {;}
+              [0017, 0009] (0001,           identifier) {acc}
+              [0017, 0013] (0029,               opAttr) {=}
+              [0017, 0015] (0001,           identifier) {first}
+              [0017, 0021] (0030,                opAdd) {+}
+              [0017, 0023] (0001,           identifier) {second}
+              [0017, 0029] (0039,            semicolon) {;}
   18      }   
-          [0018, 0005] (0050,             scopeEnd) {}}
+              [0018, 0005] (0050,             scopeEnd) {}}
   19  }
-          [0019, 0001] (0050,             scopeEnd) {}}
+              [0019, 0001] (0050,             scopeEnd) {}}
   20  
   21  int fn main() {
-          [0021, 0001] (0002,              typeInt) {int}
-          [0021, 0005] (0041,               fnDecl) {fn}
-          [0021, 0008] (0038,                 main) {main}
-          [0021, 0012] (0047,           paramBegin) {(}
-          [0021, 0013] (0048,             paramEnd) {)}
-          [0021, 0015] (0049,           scopeBegin) {{}
+              [0021, 0001] (0002,              typeInt) {int}
+              [0021, 0005] (0041,               fnDecl) {fn}
+              [0021, 0008] (0038,                 main) {main}
+              [0021, 0012] (0047,           paramBegin) {(}
+              [0021, 0013] (0048,             paramEnd) {)}
+              [0021, 0015] (0049,           scopeBegin) {{}
   22      int num;
-          [0022, 0005] (0002,              typeInt) {int}
-          [0022, 0009] (0001,           identifier) {num}
-          [0022, 0012] (0039,            semicolon) {;}
+              [0022, 0005] (0002,              typeInt) {int}
+              [0022, 0009] (0001,           identifier) {num}
+              [0022, 0012] (0039,            semicolon) {;}
   23  
   24      gets(num);
-          [0024, 0005] (0043,               fnRead) {gets}
-          [0024, 0009] (0047,           paramBegin) {(}
-          [0024, 0010] (0001,           identifier) {num}
-          [0024, 0013] (0048,             paramEnd) {)}
-          [0024, 0014] (0039,            semicolon) {;}
+              [0024, 0005] (0043,               fnRead) {gets}
+              [0024, 0009] (0047,           paramBegin) {(}
+              [0024, 0010] (0001,           identifier) {num}
+              [0024, 0013] (0048,             paramEnd) {)}
+              [0024, 0014] (0039,            semicolon) {;}
   25      
   26      fibonacci(num);
-          [0026, 0005] (0001,           identifier) {fibonacci}
-          [0026, 0014] (0047,           paramBegin) {(}
-          [0026, 0015] (0001,           identifier) {num}
-          [0026, 0018] (0048,             paramEnd) {)}
-          [0026, 0019] (0039,            semicolon) {;}
+              [0026, 0005] (0001,           identifier) {fibonacci}
+              [0026, 0014] (0047,           paramBegin) {(}
+              [0026, 0015] (0001,           identifier) {num}
+              [0026, 0018] (0048,             paramEnd) {)}
+              [0026, 0019] (0039,            semicolon) {;}
   27  
   28      return 0;
-          [0028, 0005] (0042,                fnRtn) {return}
-          [0028, 0012] (0009,               intVal) {0}
-          [0028, 0013] (0039,            semicolon) {;}
+              [0028, 0005] (0042,                fnRtn) {return}
+              [0028, 0012] (0009,               intVal) {0}
+              [0028, 0013] (0039,            semicolon) {;}
   29  }
-          [0029, 0001] (0050,             scopeEnd) {}}
+              [0029, 0001] (0050,             scopeEnd) {}}
   30  EOF
-          [0030, 0001] (0052,                     ) {EOF}
+              [0030, 0001] (0052,                     ) {EOF}

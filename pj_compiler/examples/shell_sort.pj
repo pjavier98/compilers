@@ -1,8 +1,10 @@
-int [] fn shell_sort(int size, int unsorted_list[size]) {
+int [] fn shell_sort(int unsorted_list[]) {
     int value;
     int i;
     int j;
     int h = 1;
+
+    int size = unsorted_list.size();
 
     while (h < size) {
         
@@ -37,7 +39,7 @@ int fn main() {
 
     size = i;
     
-    unsorted_list = shell_sort(size, unsorted_list);
+    unsorted_list = shell_sort(unsorted_list);
     
     for i in (0, size - 1, 1) {
         puts("%d ", unsorted_list[i]);
