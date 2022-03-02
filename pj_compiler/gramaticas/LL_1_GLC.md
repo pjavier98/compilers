@@ -28,7 +28,7 @@ Content'        = '(' ParamsCall ')' ';' Content
 
 Command         = 'cmdIf' '(' Eb ')' Body LElsif CmdElse
                 | 'cmdWhile' '(' Eb ')' Body
-                | 'cmdFor' 'identifier' '=' '(' Ea ',' Ea ',' Ea ')' Body
+                | 'cmdFor' 'identifier' 'in' '(' Ea ',' Ea ',' Ea ')' Body
                 | 'fnRead' '(' LIdentifier ')' ';'
                 | 'fnWrite' '(' 'stringVal' PrintParams ')' ';'
 

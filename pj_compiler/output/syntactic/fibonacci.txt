@@ -1,0 +1,345 @@
+   1  void fn fibonacci(int num) {
+          S = 'typeVoid' 'fnDecl' 'identifier' decl_func S
+              [0001, 0001] (0007,             typeVoid) {void}
+              [0001, 0006] (0041,               fnDecl) {fn}
+              [0001, 0009] (0001,           identifier) {fibonacci}
+          decl_func =  '(' params ')' body
+              [0001, 0018] (0047,           paramBegin) {(}
+          params = var_type 'identifier' arr_opc params_x
+          var_type = 'typeInt'
+              [0001, 0019] (0002,              typeInt) {int}
+              [0001, 0023] (0001,           identifier) {num}
+          arr_opc = ε
+              [0001, 0026] (0048,             paramEnd) {)}
+          params_x = ε
+          body = '{' content '}'
+              [0001, 0028] (0049,           scopeBegin) {{}
+   2      if (num == 0) {
+          content = command content
+          command = 'cmdIf' '(' eb ')' body l_elsif cmd_else
+              [0002, 0005] (0013,                cmdIf) {if}
+              [0002, 0008] (0047,           paramBegin) {(}
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0002, 0009] (0001,           identifier) {num}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+              [0002, 0013] (0023,              opEqual) {==}
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = 'intVal'
+              [0002, 0016] (0009,               intVal) {0}
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+              [0002, 0017] (0048,             paramEnd) {)}
+          body = '{' content '}'
+              [0002, 0019] (0049,           scopeBegin) {{}
+   3          return;
+          content = 'fnRtn' rtn ';'
+              [0003, 0009] (0042,                fnRtn) {return}
+          rtn = ε
+              [0003, 0015] (0039,            semicolon) {;}
+   4      } elsif (num == 1) {
+              [0004, 0005] (0050,             scopeEnd) {}}
+          l_elsif = 'cmdElsif' '(' eb ')' body l_elsif
+              [0004, 0007] (0014,             cmdElsif) {elsif}
+              [0004, 0013] (0047,           paramBegin) {(}
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0004, 0014] (0001,           identifier) {num}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+              [0004, 0018] (0023,              opEqual) {==}
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = 'intVal'
+              [0004, 0021] (0009,               intVal) {1}
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+              [0004, 0022] (0048,             paramEnd) {)}
+          body = '{' content '}'
+              [0004, 0024] (0049,           scopeBegin) {{}
+   5          puts("0");
+          content = command content
+          command = 'fnWrite' '(' 'stringVal' print_params ')' ';'
+              [0005, 0009] (0044,              fnWrite) {puts}
+              [0005, 0013] (0047,           paramBegin) {(}
+              [0005, 0014] (0012,            stringVal) {"0"}
+          print_params = ε
+              [0005, 0017] (0048,             paramEnd) {)}
+              [0005, 0018] (0039,            semicolon) {;}
+   6          return;
+          content = 'fnRtn' rtn ';'
+              [0006, 0009] (0042,                fnRtn) {return}
+          rtn = ε
+              [0006, 0015] (0039,            semicolon) {;}
+   7      }
+              [0007, 0005] (0050,             scopeEnd) {}}
+   8  
+   9      int first = 0;
+          l_elsif = ε
+          content = var_type 'identifier' decl_var content
+          var_type = 'typeInt'
+              [0009, 0005] (0002,              typeInt) {int}
+              [0009, 0009] (0001,           identifier) {first}
+          decl_var = l_var ';'
+          l_var = var_x l_var_x
+          var_x = '=' ec
+              [0009, 0015] (0029,               opAttr) {=}
+          ec = eb ec_x
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = 'intVal'
+              [0009, 0017] (0009,               intVal) {0}
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          ec_x = ε
+          l_var_x = ε
+              [0009, 0018] (0039,            semicolon) {;}
+  10      int second = 1;
+          content = var_type 'identifier' decl_var content
+          var_type = 'typeInt'
+              [0010, 0005] (0002,              typeInt) {int}
+              [0010, 0009] (0001,           identifier) {second}
+          decl_var = l_var ';'
+          l_var = var_x l_var_x
+          var_x = '=' ec
+              [0010, 0016] (0029,               opAttr) {=}
+          ec = eb ec_x
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = 'intVal'
+              [0010, 0018] (0009,               intVal) {1}
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          ec_x = ε
+          l_var_x = ε
+              [0010, 0019] (0039,            semicolon) {;}
+  11      int acc = first + second;
+          content = var_type 'identifier' decl_var content
+          var_type = 'typeInt'
+              [0011, 0005] (0002,              typeInt) {int}
+              [0011, 0009] (0001,           identifier) {acc}
+          decl_var = l_var ';'
+          l_var = var_x l_var_x
+          var_x = '=' ec
+              [0011, 0013] (0029,               opAttr) {=}
+          ec = eb ec_x
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0011, 0015] (0001,           identifier) {first}
+          var_or_func_x = ε
+          ta_x = ε
+              [0011, 0021] (0030,                opAdd) {+}
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0011, 0023] (0001,           identifier) {second}
+          var_or_func_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          ec_x = ε
+          l_var_x = ε
+              [0011, 0029] (0039,            semicolon) {;}
+  12      
+  13      while (acc < num) {
+          content = command content
+          command = 'cmdWhile' '(' eb ')' body
+              [0013, 0005] (0017,             cmdWhile) {while}
+              [0013, 0011] (0047,           paramBegin) {(}
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0013, 0012] (0001,           identifier) {acc}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = 'opLessThan' ra fb_x
+              [0013, 0016] (0026,           opLessThan) {<}
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0013, 0018] (0001,           identifier) {num}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+              [0013, 0021] (0048,             paramEnd) {)}
+          body = '{' content '}'
+              [0013, 0023] (0049,           scopeBegin) {{}
+  14          puts(", %d", acc);
+          content = command content
+          command = 'fnWrite' '(' 'stringVal' print_params ')' ';'
+              [0014, 0009] (0044,              fnWrite) {puts}
+              [0014, 0013] (0047,           paramBegin) {(}
+              [0014, 0014] (0012,            stringVal) {", %d"}
+          print_params = ',' eb print_params
+              [0014, 0020] (0040,             commaSep) {,}
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0014, 0022] (0001,           identifier) {acc}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          print_params = ε
+              [0014, 0025] (0048,             paramEnd) {)}
+              [0014, 0026] (0039,            semicolon) {;}
+  15          first = second;
+          content = 'identifier' content_x
+              [0015, 0009] (0001,           identifier) {first}
+          content_x = l_attr ';' content
+          l_attr_x = '=' ec l_attr_x
+              [0015, 0015] (0029,               opAttr) {=}
+          ec = eb ec_x
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0015, 0017] (0001,           identifier) {second}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          ec_x = ε
+          l_attr_x = ε
+              [0015, 0023] (0039,            semicolon) {;}
+  16          second = acc;
+          content = 'identifier' content_x
+              [0016, 0009] (0001,           identifier) {second}
+          content_x = l_attr ';' content
+          l_attr_x = '=' ec l_attr_x
+              [0016, 0016] (0029,               opAttr) {=}
+          ec = eb ec_x
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0016, 0018] (0001,           identifier) {acc}
+          var_or_func_x = ε
+          ta_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          ec_x = ε
+          l_attr_x = ε
+              [0016, 0021] (0039,            semicolon) {;}
+  17          acc = first + second;
+          content = 'identifier' content_x
+              [0017, 0009] (0001,           identifier) {acc}
+          content_x = l_attr ';' content
+          l_attr_x = '=' ec l_attr_x
+              [0017, 0013] (0029,               opAttr) {=}
+          ec = eb ec_x
+          eb = tb eb_x
+          tb = fb tb_x
+          fb = ra fb_x
+          ra = ea ra_x
+          ea = ta ea_x
+          ta = fa ta_x
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0017, 0015] (0001,           identifier) {first}
+          var_or_func_x = ε
+          ta_x = ε
+              [0017, 0021] (0030,                opAdd) {+}
+          fa = var_or_func
+          var_or_func = 'identifier' var_or_func_x
+              [0017, 0023] (0001,           identifier) {second}
+          var_or_func_x = ε
+          ea_x = ε
+          ra_x = ε
+          fb_x = ε
+          tb_x = ε
+          eb_x = ε
+          ec_x = ε
+          l_attr_x = ε
+              [0017, 0029] (0039,            semicolon) {;}
+  18      }   
+          content = ε
+              [0018, 0005] (0050,             scopeEnd) {}}
+  19  }
+          content = ε
+              [0019, 0001] (0050,             scopeEnd) {}}
+          S = ε

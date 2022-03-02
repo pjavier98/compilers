@@ -48,7 +48,7 @@ Content           = Command Content
 Command           = 'cmdIf' '(' Eb ')' Body LElsif
                   | 'cmdIf' '(' Eb ')' Body LElsif 'cmdElse' Body
                   | 'cmdWhile' '(' Eb ')' Body
-                  | 'cmdFor' 'identifier' '=' '(' Ea ',' Ea ',' Ea ')' Body
+                  | 'cmdFor' 'identifier' 'in' '(' Ea ',' Ea ',' Ea ')' Body
                   | 'fnRead' '(' LIdentfier ')' ';'
                   | 'fnWrite' '(' 'stringVal' PrintParams ')' ';'
 

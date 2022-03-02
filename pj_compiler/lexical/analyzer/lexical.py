@@ -1,8 +1,8 @@
 import re
-from lexical_analyzer.lexeme_table import LexemeTable
-from lexical_analyzer.separators import Separators
-from tokens.token import Token
-from tokens.token_category import TokenCategory
+from lexical.analyzer.lexeme_table import LexemeTable
+from lexical.analyzer.separators import Separators
+from lexical.tokens.token import Token
+from lexical.tokens.token_category import TokenCategory
 
 class Lexical():
   def __init__(self, file):
@@ -207,20 +207,20 @@ class Lexical():
     return True
 
   def has_next_token(self):
-    if(self.line_count == 0 and self.current_column == 0):
-      if(self.has_next_line()):
+    if (self.line_count == 0 and self.current_column == 0):
+      if (self.has_next_line()):
         self.print_line()
       else:
         self.print_line()
         return False
         
-    if(re.match('[\s]*$', self.current_line[self.current_column:])):
-      while(self.has_next_line()):
+    if (re.match('[\s]*$', self.current_line[self.current_column:])):
+      while (self.has_next_line()):
         self.print_line()
-        if(not re.match('[\s]*$', self.current_line)):
+        if (not re.match('[\s]*$', self.current_line)):
           return True
       
-      if(self.EOF == False):
+      if (self.EOF == False):
         self.EOF = True
         return True
 

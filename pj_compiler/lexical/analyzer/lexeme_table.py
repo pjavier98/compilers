@@ -1,4 +1,4 @@
-from tokens.token_category import TokenCategory
+from lexical.tokens.token_category import TokenCategory
 
 class LexemeTable():
   def __init__(self):
